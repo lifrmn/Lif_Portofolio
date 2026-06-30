@@ -369,5 +369,31 @@
 
 <script src="./assets/js/script.js"></script>
 
+<script>
+  fetch('/projects/projects.json')
+    .then(res => res.json())
+    .then(projects => {
+      let container = document.querySelector('.work .box-container');
+      let html = '';
+      projects.forEach(p => {
+        html += `
+        <div class="box tilt">
+          <img draggable="false" src="/assets/images/projects/${p.image}" alt="${p.name}" />
+          <div class="content">
+            <div class="tag"><h3>${p.name}</h3></div>
+            <div class="desc">
+              <p>${p.desc}</p>
+              <div class="btns">
+                <a href="${p.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+                <a href="${p.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>`;
+      });
+      container.innerHTML = html;
+    });
+</script>
+
 </body>
 </html>
