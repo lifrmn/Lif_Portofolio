@@ -1613,4 +1613,104 @@ body.dark-mode html::-webkit-scrollbar-thumb {
   }
 }
 
+/* dark mode — hero section */
+body.dark-mode .home .content h2 {
+  color: #c9d6ff;
+}
+body.dark-mode .home .content h2 span {
+  color: #ffae00;
+}
+body.dark-mode .home .content p {
+  color: #e0e0e0;
+}
+body.dark-mode .home .content p span {
+  color: #ff7f7f;
+}
+
+/* dark mode — about section */
+body.dark-mode .about {
+  background: #16213e;
+}
+body.dark-mode .about .row .content h3 {
+  color: #eaeaea;
+}
+body.dark-mode .about .row .content .tag {
+  color: #00d4ff;
+}
+body.dark-mode .about .row .content p {
+  color: #c8d0e0;
+}
+body.dark-mode .about .row .content .box-container .box p {
+  color: #c8d0e0;
+}
+body.dark-mode .about .row .content .box-container .box p span {
+  color: #00d4ff;
+}
+
+/* dark mode — education section */
+body.dark-mode .education {
+  background: #0f3460;
+}
+body.dark-mode .education .qoute {
+  color: #c8d0e0;
+}
+body.dark-mode .education .box-container .box {
+  background: #16213e;
+}
+body.dark-mode .education .box-container .box .content h3 {
+  color: #90caf9;
+}
+body.dark-mode .education .box-container .box .content p {
+  color: #c8d0e0;
+}
+body.dark-mode .education h4 {
+  color: #69f0ae;
+}
+
+/* dark mode — experience section */
+body.dark-mode .experience {
+  background: #1a1a2e;
+}
+body.dark-mode .experience .timeline::after {
+  background: #00d4ff;
+}
+body.dark-mode .experience .container::after {
+  background-color: #16213e;
+  border-color: #00d4ff;
+  color: #eaeaea;
+}
+body.dark-mode .experience .content {
+  background: linear-gradient(135deg, #0f3460, #16213e);
+}
+body.dark-mode .experience .content .tag h2 {
+  color: #00d4ff;
+}
+body.dark-mode .experience .content .desc h3 {
+  color: #eaeaea;
+}
+body.dark-mode .experience .content .desc p {
+  color: #c8d0e0;
+}
+body.dark-mode .experience .left::before {
+  border-color: transparent transparent transparent #00d4ff;
+}
+body.dark-mode .experience .right::before {
+  border-color: transparent #00d4ff transparent transparent;
+}
+body.dark-mode .experience .container::before {
+  border-color: transparent #00d4ff transparent transparent;
+}
+
+/* dark mode — contact section */
+body.dark-mode .contact {
+  background: #1a1a2e;
+}
+body.dark-mode .contact .container {
+  background: #16213e;
+  border-color: #00d4ff33;
+}
+body.dark-mode .contact .contact-icon {
+  color: #00d4ff;
+}
+
 /* dark mode ends */
