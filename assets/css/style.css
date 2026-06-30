@@ -1077,6 +1077,16 @@ header .navbar ul li a:hover {
   object-fit: contain;
   filter: drop-shadow(0 1.6rem 2.8rem rgba(37, 6, 173, 0.18));
 }
+.contact .content .image-box .contact-icon {
+  font-size: 16rem;
+  color: var(--main-color, #00b4d8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40rem;
+  opacity: 0.85;
+  filter: drop-shadow(0 1.6rem 2.8rem rgba(37, 6, 173, 0.18));
+}
 .contact .content form {
   flex: 1 1 40rem;
   width: 45%;
