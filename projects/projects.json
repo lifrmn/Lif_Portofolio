@@ -1,5 +1,15 @@
 [
   {
+    "name": "Sulbar Kerja",
+    "desc": "Portal lowongan kerja lokal Polewali Mandar untuk mencari lowongan, menemukan perusahaan terverifikasi, menyimpan peluang, dan memantau proses lamaran.",
+    "image": "sulbar-kerja-live.png",
+    "category": "basicweb",
+    "links": {
+      "view": "https://web-lime-nine-70.vercel.app/",
+      "code": "https://github.com/lifrmn"
+    }
+  },
+  {
     "name": "UMKM Kue Tradisional",
     "desc": "Website UMKM Toko Kue Tradisional dengan fitur dashboard penjual, menu kue, rekening, dan kelola pesanan. Deployed di Vercel.",
     "image": "umkmkue-live.png",
@@ -10,12 +20,12 @@
     }
   },
   {
-    "name": "Website Kucing Polewali Mandar",
-    "desc": "Website layanan perawatan kucing terbaik di Polewali Mandar. Dilengkapi fitur produk, booking, pesanan, dan tips kesehatan.",
-    "image": "kucingpolewali-live.png",
+    "name": "Cikal Pet Care Polewali Mandar",
+    "desc": "Website layanan grooming, penitipan, dan produk kucing di Polewali Mandar. Dilengkapi fitur booking, pesanan, serta tips kesehatan.",
+    "image": "cikal-pet-care-live.png",
     "category": "basicweb",
     "links": {
-      "view": "https://github.com/lifrmn/Website-Kucing-Polewali-Mandar",
+      "view": "https://website-kucing-polewali-mandar.vercel.app/",
       "code": "https://github.com/lifrmn/Website-Kucing-Polewali-Mandar"
     }
   }
