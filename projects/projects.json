@@ -1,32 +1,30 @@
 [
   {
-    "name": "Sulbar Kerja",
-    "desc": "Portal lowongan kerja lokal Polewali Mandar untuk mencari lowongan, menemukan perusahaan terverifikasi, menyimpan peluang, dan memantau proses lamaran.",
-    "image": "sulbar-kerja-live.png",
-    "category": "basicweb",
+    "name": "Terrakion Store",
+    "desc": "A digital storefront with a premium application catalog, product search and filters, a shopping cart, and order tracking.",
+    "image": "terrakion-store-live.png",
+    "category": "Web development",
     "links": {
-      "view": "https://web-lime-nine-70.vercel.app/",
-      "code": "https://github.com/lifrmn"
+      "view": "https://terrakionstore.my.id/index.php?page=catalog&category=aplikasi-premium"
+    }
+  },
+  {
+    "name": "Cikal Pet Care Polman",
+    "desc": "A pet care and pet shop website with service and boarding reservations, customer and pet data validation, and booking management through an admin dashboard and API.",
+    "image": "cikal-pet-care-live.png",
+    "category": "Web development",
+    "links": {
+      "view": "https://cikalpetcare.biz.id/"
     }
   },
   {
     "name": "UMKM Kue Tradisional",
-    "desc": "Website UMKM Toko Kue Tradisional dengan fitur dashboard penjual, menu kue, rekening, dan kelola pesanan. Deployed di Vercel.",
+    "desc": "A traditional cake shop website with a seller dashboard, cake menu, payment account details, and order management.",
     "image": "umkmkue-live.png",
-    "category": "basicweb",
+    "category": "Web development",
     "links": {
       "view": "https://kue-tradisional.vercel.app",
       "code": "https://github.com/lifrmn/UMKM-Kue-Tradisional"
-    }
-  },
-  {
-    "name": "Cikal Pet Care Polewali Mandar",
-    "desc": "Website layanan grooming, penitipan, dan produk kucing di Polewali Mandar. Dilengkapi fitur booking, pesanan, serta tips kesehatan.",
-    "image": "cikal-pet-care-live.png",
-    "category": "basicweb",
-    "links": {
-      "view": "https://website-kucing-polewali-mandar.vercel.app/",
-      "code": "https://github.com/lifrmn/Website-Kucing-Polewali-Mandar"
     }
   }
 ]
