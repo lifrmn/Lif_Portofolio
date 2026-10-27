@@ -122,18 +122,21 @@
     container.setAttribute("aria-busy", "false");
   }
 
+  const categoryLabels = { basicweb: "Web development", mern: "Full-stack development", android: "Mobile development" };
+
   function projectElement(project, index) {
     const article = createElement("article", "project-item reveal");
     const heading = createElement("div", "project-heading");
     const titleGroup = createElement("div");
     const title = createElement(projectsGrid.dataset.heading === "h2" ? "h2" : "h3", "project-title", project.name);
-    const category = project.category;
+    const category = categoryLabels[project.category] || "Development";
     titleGroup.append(title, createElement("span", "project-kind", category));
     heading.append(createElement("span", "project-index", String(index + 1).padStart(2, "0")), titleGroup);
 
     const visual = externalLink(project.links.view, "project-visual", `Visit ${project.name} (opens in a new tab)`);
     const image = createElement("img");
-    image.src = new URL(`assets/images/projects/${project.image}`, siteRoot).href;
+    const imageFile = project.image.includes(".") ? project.image : `${project.image}.png`;
+    image.src = new URL(`assets/images/projects/${imageFile}`, siteRoot).href;
     image.alt = `${project.name} website preview`;
     image.loading = "lazy";
     image.decoding = "async";
@@ -141,7 +144,7 @@
     image.height = 1000;
     image.addEventListener("error", () => {
       image.hidden = true;
-      visual.prepend(createElement("span", "", project.name));
+      visual.prepend(createElement("span", "preview-fallback", project.name));
     }, { once: true });
     const arrow = createElement("span", "project-open");
     arrow.append(makeIcon("fas fa-arrow-up"));
@@ -149,7 +152,7 @@
 
     const bottom = createElement("div", "project-bottom");
     const tags = createElement("div", "project-tags");
-    tags.append(createElement("span", "", category));
+    tags.append(createElement("span", "", category), createElement("span", "", "Personal project"));
     bottom.append(tags);
     if (project.links.code) {
       const code = externalLink(project.links.code, "project-code", `Source code for ${project.name} (opens in a new tab)`);
@@ -165,11 +168,10 @@
   const projectSearch = document.getElementById("project-search");
   const projectCount = document.getElementById("project-count");
   const projectFilters = document.getElementById("project-filters");
-  let projects = null;
+  let projects = [];
   let activeCategory = "all";
 
   function renderProjects() {
-    if (!projects) return;
     const query = (projectSearch?.value || "").trim().toLowerCase();
     const filtered = projects.filter((project) => {
       const matchesCategory = activeCategory === "all" || project.category === activeCategory;
@@ -188,12 +190,9 @@
   function renderFilters() {
     if (!projectFilters) return;
     projectFilters.replaceChildren();
-    const categories = [...new Set(projects.map((project) => project.category))];
-    if (!categories.includes(activeCategory)) activeCategory = "all";
-    projectFilters.hidden = categories.length < 2;
-    if (projectFilters.hidden) return;
-    ["all", ...categories].forEach((category) => {
-      const button = createElement("button", "filter-button", category === "all" ? "All work" : category);
+    const categories = ["all", ...new Set(projects.map((project) => project.category))];
+    categories.forEach((category) => {
+      const button = createElement("button", "filter-button", category === "all" ? "All work" : categoryLabels[category] || category);
       button.type = "button";
       button.setAttribute("aria-pressed", String(category === activeCategory));
       button.addEventListener("click", () => {
@@ -206,7 +205,6 @@
   }
 
   async function loadProjects() {
-    projects = null;
     projectsGrid.setAttribute("aria-busy", "true");
     projectsGrid.replaceChildren(createElement("p", "data-message", "Loading projects..."));
     try {
@@ -214,7 +212,6 @@
       renderFilters();
       renderProjects();
     } catch {
-      projects = null;
       showDataError(projectsGrid, "Projects could not be loaded.", loadProjects);
     }
   }

@@ -1,9 +1,9 @@
 [
   {
     "name": "Terrakion Store",
-    "desc": "A digital storefront with a premium application catalog, product search and filters, a shopping cart, and order tracking.",
+    "desc": "A premium application catalog with a selection of digital products from Terrakion Store.",
     "image": "terrakion-store-live.png",
-    "category": "Web development",
+    "category": "basicweb",
     "links": {
       "view": "https://terrakionstore.my.id/index.php?page=catalog&category=aplikasi-premium"
     }
@@ -12,16 +12,26 @@
     "name": "Cikal Pet Care Polman",
     "desc": "A pet care and pet shop website with service and boarding reservations, customer and pet data validation, and booking management through an admin dashboard and API.",
     "image": "cikal-pet-care-live.png",
-    "category": "Web development",
+    "category": "basicweb",
     "links": {
-      "view": "https://cikalpetcare.biz.id/"
+      "view": "https://cikalpetcare.biz.id/",
+      "code": "https://github.com/lifrmn/Website-Kucing-Polewali-Mandar"
+    }
+  },
+  {
+    "name": "Sulbar Kerja",
+    "desc": "A local job board for Polewali Mandar, with job listings, verified companies, saved opportunities, and application tracking.",
+    "image": "sulbar-kerja-live.png",
+    "category": "basicweb",
+    "links": {
+      "view": "https://web-lime-nine-70.vercel.app/"
     }
   },
   {
     "name": "UMKM Kue Tradisional",
     "desc": "A traditional cake shop website with a seller dashboard, cake menu, payment account details, and order management.",
     "image": "umkmkue-live.png",
-    "category": "Web development",
+    "category": "basicweb",
     "links": {
       "view": "https://kue-tradisional.vercel.app",
       "code": "https://github.com/lifrmn/UMKM-Kue-Tradisional"
